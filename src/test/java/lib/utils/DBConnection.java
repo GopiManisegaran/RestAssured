@@ -92,11 +92,12 @@ public class DBConnection extends RESTAssuredBase{
 	 * String query){ query="DELETE FROM"+ tableName + "WHERE"+ column+ "="+ value;
 	 * List<Map<String,Object>> results = jdbcTemplate.queryForList(query); return
 	 * results.toString(); }
+	
 	 */
 		
-		public void GetDataFromTable() throws ClassNotFoundException, SQLException{
-			final String query="SELECT * FROM CUSTOMERS";
-            
+		public String GetDataFromTable(String selectQuery) throws ClassNotFoundException, SQLException{
+		//	final String query="SELECT * FROM CUSTOMERS";
+			String data =null;
      	    //Load mysql jdbc driver		
        	    Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");			
        
@@ -110,10 +111,11 @@ public class DBConnection extends RESTAssuredBase{
       		//Create Statement Object		
     	   //tatement stmt = con.createStatement();
 				Statement stmt=con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
-    	   ResultSet rs=stmt.executeQuery(query);
+				ResultSet rs=stmt.executeQuery(selectQuery);
     	   
     	   while (rs.next()) {
-    	   System.out.println(rs.getString(1));
+    	
+    	    data = rs.getString("forname");
     	   }
    			// Execute the SQL Query. Store results in ResultSet
     	   //stmt.addBatch(query);
@@ -130,6 +132,7 @@ public class DBConnection extends RESTAssuredBase{
 			}
 		// jdbcTemplate.execute(query);
 	//	 jdbcTemplate.execute(query);
+			return data;
 		
 	}
 		@SuppressWarnings("unchecked")

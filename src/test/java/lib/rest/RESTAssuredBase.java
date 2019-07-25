@@ -114,6 +114,12 @@ public class RESTAssuredBase extends PreAndTest {
 				.body(bodyFile)
 				.put(URL);
 	}
+	public static Response putWithJsonAsBody(String jsonObject, String URL) {
+
+		return setLogs()
+				.body(jsonObject)
+				.put(URL);
+	}
 	
 	public static Response postWithHeaderAndForm(Map<String, String> headers,
 			JSONObject jsonObject, String URL) {
@@ -172,6 +178,12 @@ public class RESTAssuredBase extends PreAndTest {
 		return setLogs()
 				.when()
 				.headers(headers)
+				.delete(URL);
+	}
+	public static Response DeleteWithJsonAsBody(String jsonObject, String URL) {
+
+		return setLogs()
+				.body(jsonObject)
 				.delete(URL);
 	}
 
@@ -326,4 +338,36 @@ public class RESTAssuredBase extends PreAndTest {
 			reportRequest("Data not updated","FAIL");
 		}
 	}
+	public String getDataFromDB (String SelectDataKey) throws ClassNotFoundException, SQLException, JSONException {
+		String data = null;
+		try {
+			String SelectQeryFromProp = getValueFromPropertyFile(SelectDataKey);
+			DBConnection dbConn = new DBConnection();
+			
+		 data =    	dbConn.GetDataFromTable(SelectQeryFromProp);
+			reportRequest("Data retrieved Successfully","PASS");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			
+			reportRequest("Data not retrieved","FAIL");
+		}
+		return data;
+	}
+	
+	public void compareTwoData (String actual, String expected) {
+		
+		try {
+			if (actual.equalsIgnoreCase(expected)) {
+				reportRequest("Actual data: "+actual+" matches with expected data: "+expected,"PASS");
+			}
+			else {
+				reportRequest("Actual data: "+actual+" does not matches with expected data: "+expected,"FAIL");
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		//	reportRequest("Unable to compare data: "+e,"FAIL");
+		}
+	}
+	
 }

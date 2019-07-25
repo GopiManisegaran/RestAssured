@@ -4,6 +4,9 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="tests.rest.TC001_GetCustomers"/>
+      <class name="tests.rest.TC009_UpdateCustomersDetails"/>
+      <class name="tests.rest.TC008_InsertCustomersDetails"/>
+      <class name="tests.rest.TC010_DeleteCustomersDetails"/>
       <class name="tests.rest.TC007_ValidateCustomers_AfterUpdate"/>
       <class name="tests.rest.TC006_ValidateCustomers_AfterInsert"/>
     </classes>
