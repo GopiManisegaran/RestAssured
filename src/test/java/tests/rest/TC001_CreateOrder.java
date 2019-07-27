@@ -1,22 +1,15 @@
 package tests.rest;
 
-import java.io.File;
-import net.javacrumbs.*;
-import net.javacrumbs.jsonunit.JsonAssert;
+import java.lang.reflect.InvocationTargetException;
 
 import java.sql.SQLException;
 
-import org.apache.poi.ss.formula.ptg.DeletedArea3DPtg;
 import org.json.JSONException;
-import org.json.simple.JSONArray;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import lib.rest.RESTAssuredBase;
-import lib.utils.DBConnection;
 
 public class TC001_CreateOrder extends RESTAssuredBase{
 	
@@ -37,7 +30,7 @@ public class TC001_CreateOrder extends RESTAssuredBase{
 	
 	
 	@Test(dataProvider = "fetchData")
-	public void createOrder(String URL, String order , String tableName , String column,String value , String QueryKey) throws ClassNotFoundException, SQLException, JSONException {		
+	public void createOrder(String URL, String order , String tableName , String column,String value , String QueryKey) throws ClassNotFoundException, SQLException, JSONException, ArithmeticException, InvocationTargetException {		
 						
 		// Map<String, String> header = new HashMap<String, String>();
 		//header.put("Content-Type", "application/json");

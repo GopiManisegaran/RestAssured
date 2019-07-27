@@ -1,22 +1,15 @@
 package tests.rest;
 
-import java.io.File;
-import net.javacrumbs.*;
-import net.javacrumbs.jsonunit.JsonAssert;
+import java.lang.reflect.InvocationTargetException;
 
 import java.sql.SQLException;
 
-import org.apache.poi.ss.formula.ptg.DeletedArea3DPtg;
 import org.json.JSONException;
-import org.json.simple.JSONArray;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import lib.rest.RESTAssuredBase;
-import lib.utils.DBConnection;
 
 public class TC002_GetLogins extends RESTAssuredBase{
 	
@@ -37,7 +30,7 @@ public class TC002_GetLogins extends RESTAssuredBase{
 	
 	
 	@Test(dataProvider = "fetchData")
-	public void getLogins(String URL,String QueryKey) throws ClassNotFoundException, SQLException, JSONException {		
+	public void getLogins(String URL,String QueryKey) throws ClassNotFoundException, SQLException, JSONException, ArithmeticException, InvocationTargetException {		
 
 		Response response =get(URL);
 		String actual = response.asString();

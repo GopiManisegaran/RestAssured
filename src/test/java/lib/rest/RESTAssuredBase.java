@@ -9,7 +9,6 @@ import java.util.Map;
 import java.util.Properties;
 
 import org.json.JSONException;
-
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -213,7 +212,7 @@ public class RESTAssuredBase extends PreAndTest {
 		if(response.statusCode() == code) {
 			reportRequest("The status code "+code+" matches the expected code", "PASS");
 		}else {
-			reportRequest("The status code "+code+" does not match the expected code"+response.statusCode(), "FAIL");	
+			reportRequest("The status code "+response.statusCode()+" does not match the expected code "+code, "FAIL");	
 		}
 	}
 	
@@ -271,7 +270,8 @@ public class RESTAssuredBase extends PreAndTest {
 	}
 	
 	@SuppressWarnings("static-access")
-	public void compareTwoJsonObject (String QueryKey,String actual)
+//	@Test(expectedExceptions = ArithmeticException.class)
+	public void compareTwoJsonObject (String QueryKey,String actual) throws AssertionError
 	{
 		try {
 			//String strQuery = "";
@@ -292,7 +292,13 @@ public class RESTAssuredBase extends PreAndTest {
 		
 			reportRequest("<html><font color=\"orange\"> The actual JSON response : </font></html>"+actual+"<html><font color=\"orange\"> matches with expected Json :</font></html>"+expected+".", "PASS");
 	
-		} catch (Exception e) {
+		} 
+		
+		catch (AssertionError e) {
+			// TODO Auto-generated catch block
+			reportRequest(e.toString(), "FAIL");
+		}
+		catch (Exception e) {
 			// TODO Auto-generated catch block
 			reportRequest(e.toString(), "FAIL");
 		}

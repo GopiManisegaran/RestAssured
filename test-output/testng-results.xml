@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="358965" started-at="2019-07-25T17:35:20Z" finished-at="2019-07-25T17:41:19Z">
+  <suite name="Default suite" duration-ms="4658" started-at="2019-07-27T11:23:40Z" finished-at="2019-07-27T11:23:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="358965" started-at="2019-07-25T17:35:20Z" finished-at="2019-07-25T17:41:19Z">
+    <test name="Default test" duration-ms="4658" started-at="2019-07-27T11:23:40Z" finished-at="2019-07-27T11:23:45Z">
       <class name="tests.rest.TC001_GetCustomers">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:tests.rest.TC001_GetCustomers@38d8f54a]" name="beforeSuite" is-config="true" duration-ms="1107" started-at="2019-07-25T17:35:19Z" finished-at="2019-07-25T17:35:20Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:tests.rest.TC001_GetCustomers@27a8c74e]" name="beforeSuite" is-config="true" duration-ms="891" started-at="2019-07-27T11:23:39Z" finished-at="2019-07-27T11:23:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="setValues()[pri:0, instance:tests.rest.TC001_GetCustomers@38d8f54a]" name="setValues" is-config="true" duration-ms="0" started-at="2019-07-25T17:35:20Z" finished-at="2019-07-25T17:35:20Z">
+        <test-method status="PASS" signature="setValues()[pri:0, instance:tests.rest.TC001_GetCustomers@27a8c74e]" name="setValues" is-config="true" duration-ms="0" started-at="2019-07-27T11:23:40Z" finished-at="2019-07-27T11:23:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setValues -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.rest.TC001_GetCustomers@38d8f54a]" name="beforeClass" is-config="true" duration-ms="4" started-at="2019-07-25T17:35:20Z" finished-at="2019-07-25T17:35:20Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.rest.TC001_GetCustomers@27a8c74e]" name="beforeClass" is-config="true" duration-ms="2" started-at="2019-07-27T11:23:40Z" finished-at="2019-07-27T11:23:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tests.rest.TC001_GetCustomers@38d8f54a]" name="beforeMethod" is-config="true" duration-ms="8" started-at="2019-07-25T17:35:20Z" finished-at="2019-07-25T17:35:20Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tests.rest.TC001_GetCustomers@27a8c74e]" name="beforeMethod" is-config="true" duration-ms="7" started-at="2019-07-27T11:23:40Z" finished-at="2019-07-27T11:23:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="getCustomers()[pri:0, instance:tests.rest.TC001_GetCustomers@38d8f54a]" name="getCustomers" duration-ms="358910" started-at="2019-07-25T17:35:20Z" finished-at="2019-07-25T17:41:19Z">
+        <test-method status="PASS" signature="getCustomers()[pri:0, instance:tests.rest.TC001_GetCustomers@27a8c74e]" name="getCustomers" duration-ms="4618" started-at="2019-07-27T11:23:40Z" finished-at="2019-07-27T11:23:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getCustomers -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tests.rest.TC001_GetCustomers@38d8f54a]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-07-25T17:41:19Z" finished-at="2019-07-25T17:41:19Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tests.rest.TC001_GetCustomers@27a8c74e]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-07-27T11:23:45Z" finished-at="2019-07-27T11:23:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:tests.rest.TC001_GetCustomers@38d8f54a]" name="afterSuite" is-config="true" duration-ms="1341" started-at="2019-07-25T17:41:19Z" finished-at="2019-07-25T17:41:21Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:tests.rest.TC001_GetCustomers@27a8c74e]" name="afterSuite" is-config="true" duration-ms="534" started-at="2019-07-27T11:23:45Z" finished-at="2019-07-27T11:23:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
