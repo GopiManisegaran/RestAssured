@@ -23,7 +23,7 @@ public abstract class HTMLReporter {
 	//@BeforeSuite
 	public void startReport() {
 		
-		RestAssured.baseURI = "http://localhost:1111/";
+//		RestAssured.baseURI = "http://localhost:1111/";
 
 		
 		html = new ExtentHtmlReporter("./reports/result.html");

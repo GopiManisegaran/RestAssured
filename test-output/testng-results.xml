@@ -2,40 +2,53 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4658" started-at="2019-07-27T11:23:40Z" finished-at="2019-07-27T11:23:45Z">
+  <suite name="Default suite" duration-ms="5636" started-at="2019-07-28T17:26:19Z" finished-at="2019-07-28T17:26:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4658" started-at="2019-07-27T11:23:40Z" finished-at="2019-07-27T11:23:45Z">
-      <class name="tests.rest.TC001_GetCustomers">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:tests.rest.TC001_GetCustomers@27a8c74e]" name="beforeSuite" is-config="true" duration-ms="891" started-at="2019-07-27T11:23:39Z" finished-at="2019-07-27T11:23:40Z">
+    <test name="Default test" duration-ms="5636" started-at="2019-07-28T17:26:19Z" finished-at="2019-07-28T17:26:25Z">
+      <class name="tests.rest.TC010_DeleteCustomersDetails">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:tests.rest.TC010_DeleteCustomersDetails@1b68ddbd]" name="beforeSuite" is-config="true" duration-ms="352" started-at="2019-07-28T17:26:19Z" finished-at="2019-07-28T17:26:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="setValues()[pri:0, instance:tests.rest.TC001_GetCustomers@27a8c74e]" name="setValues" is-config="true" duration-ms="0" started-at="2019-07-27T11:23:40Z" finished-at="2019-07-27T11:23:40Z">
+        <test-method status="PASS" signature="setValues()[pri:0, instance:tests.rest.TC010_DeleteCustomersDetails@1b68ddbd]" name="setValues" is-config="true" duration-ms="0" started-at="2019-07-28T17:26:19Z" finished-at="2019-07-28T17:26:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setValues -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.rest.TC001_GetCustomers@27a8c74e]" name="beforeClass" is-config="true" duration-ms="2" started-at="2019-07-27T11:23:40Z" finished-at="2019-07-27T11:23:40Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:tests.rest.TC010_DeleteCustomersDetails@1b68ddbd]" name="beforeClass" is-config="true" duration-ms="5" started-at="2019-07-28T17:26:19Z" finished-at="2019-07-28T17:26:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tests.rest.TC001_GetCustomers@27a8c74e]" name="beforeMethod" is-config="true" duration-ms="7" started-at="2019-07-27T11:23:40Z" finished-at="2019-07-27T11:23:40Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:tests.rest.TC010_DeleteCustomersDetails@1b68ddbd]" name="beforeMethod" is-config="true" duration-ms="943" started-at="2019-07-28T17:26:20Z" finished-at="2019-07-28T17:26:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="getCustomers()[pri:0, instance:tests.rest.TC001_GetCustomers@27a8c74e]" name="getCustomers" duration-ms="4618" started-at="2019-07-27T11:23:40Z" finished-at="2019-07-27T11:23:45Z">
+        <test-method status="PASS" signature="insertCustomersDetails(java.lang.String, java.lang.String)[pri:0, instance:tests.rest.TC010_DeleteCustomersDetails@1b68ddbd]" name="insertCustomersDetails" duration-ms="3647" started-at="2019-07-28T17:26:21Z" data-provider="fetchData" finished-at="2019-07-28T17:26:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[{"forname":"Govind"}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[[{"forname":"Govind","surname":"krishnan","address1":"chennai",
+"address2":"Mumbai","address3":"Goa","postcode":67869,"phone":9575739,"email":"kumar.vp@gmail.com","registered":4}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getCustomers -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tests.rest.TC001_GetCustomers@27a8c74e]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-07-27T11:23:45Z" finished-at="2019-07-27T11:23:45Z">
+        </test-method> <!-- insertCustomersDetails -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tests.rest.TC010_DeleteCustomersDetails@1b68ddbd]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-07-28T17:26:25Z" finished-at="2019-07-28T17:26:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:tests.rest.TC001_GetCustomers@27a8c74e]" name="afterSuite" is-config="true" duration-ms="534" started-at="2019-07-27T11:23:45Z" finished-at="2019-07-27T11:23:46Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:tests.rest.TC010_DeleteCustomersDetails@1b68ddbd]" name="afterSuite" is-config="true" duration-ms="1163" started-at="2019-07-28T17:26:25Z" finished-at="2019-07-28T17:26:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- tests.rest.TC001_GetCustomers -->
+      </class> <!-- tests.rest.TC010_DeleteCustomersDetails -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

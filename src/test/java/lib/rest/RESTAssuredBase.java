@@ -17,6 +17,7 @@ import io.restassured.specification.RequestLogSpecification;
 import io.restassured.specification.RequestSpecification;
 import net.javacrumbs.jsonunit.JsonAssert;
 import net.minidev.json.JSONObject;
+import restAssured.restAssured;
 import lib.utils.DBConnection;
 
 public class RESTAssuredBase extends PreAndTest {
@@ -39,8 +40,10 @@ public class RESTAssuredBase extends PreAndTest {
 	  e.printStackTrace(); 
 	  }
 		return Query; 
+		
 	  
 	  }
+	
 	 
 	
 	/*
@@ -284,9 +287,9 @@ public class RESTAssuredBase extends PreAndTest {
 			String	expected= dbConn.getTableData(QueryFromPropFile);
 			
 			JsonAssert js = null;
-	
-			System.out.println("expected:"+expected);
-				System.out.println("actual:"+actual);
+			
+		//	System.out.println("expected:"+expected);
+		//		System.out.println("actual:"+actual);
 			js.assertJsonEquals(expected, actual);
 	
 		

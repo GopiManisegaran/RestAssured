@@ -1,6 +1,7 @@
 package tests.rest;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import org.json.JSONException;
 import org.testng.annotations.BeforeTest;
@@ -35,7 +36,8 @@ public class TC001_GetCustomers extends RESTAssuredBase{
 		// Verify the response status code
 		verifyResponseCode(response, 200);	
 		compareTwoJsonObject("GetCustomerList", actual);
-
+	
+	
 	
 		
 		// Verify the response time
