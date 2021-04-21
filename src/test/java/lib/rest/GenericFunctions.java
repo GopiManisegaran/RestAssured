@@ -20,7 +20,7 @@ import net.minidev.json.JSONObject;
 import restAssured.restAssured;
 import lib.utils.DBConnection;
 
-public class RESTAssuredBase extends PreAndTest {
+public class GenericFunctions extends BaseTest {
 	
 	public String Query;
 	//public static String getCustomer;

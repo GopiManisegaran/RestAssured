@@ -6,9 +6,9 @@ import org.json.JSONException;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import lib.rest.RESTAssuredBase;
+import lib.rest.GenericFunctions;
 
-public class TC005_DeleteOrder extends RESTAssuredBase{
+public class TC005_DeleteOrder extends GenericFunctions{
 	
 	
 	

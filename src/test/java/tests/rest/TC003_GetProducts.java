@@ -9,9 +9,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
-import lib.rest.RESTAssuredBase;
+import lib.rest.GenericFunctions;
 
-public class TC003_GetProducts extends RESTAssuredBase{
+public class TC003_GetProducts extends GenericFunctions{
 	
 	
 	

@@ -8,9 +8,9 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import lib.rest.RESTAssuredBase;
+import lib.rest.GenericFunctions;
 
-public class TC008_InsertCustomersDetails extends RESTAssuredBase{
+public class TC008_InsertCustomersDetails extends GenericFunctions{
 	
 	
 	

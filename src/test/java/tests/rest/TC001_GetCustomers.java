@@ -9,9 +9,9 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import lib.rest.RESTAssuredBase;
+import lib.rest.GenericFunctions;
 
-public class TC001_GetCustomers extends RESTAssuredBase{
+public class TC001_GetCustomers extends GenericFunctions{
 		
 	@BeforeTest
 	public void setValues() {
@@ -36,10 +36,7 @@ public class TC001_GetCustomers extends RESTAssuredBase{
 		// Verify the response status code
 		verifyResponseCode(response, 200);	
 		compareTwoJsonObject("GetCustomerList", actual);
-	
-	
-	
-		
+			
 		// Verify the response time
 	//	verifyResponseTime(response, 5000);
 		

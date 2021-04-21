@@ -8,9 +8,9 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import lib.rest.RESTAssuredBase;
+import lib.rest.GenericFunctions;
 
-public class TC009_UpdateCustomersDetails extends RESTAssuredBase{
+public class TC009_UpdateCustomersDetails extends GenericFunctions{
 	
 	
 	
@@ -68,8 +68,6 @@ public class TC009_UpdateCustomersDetails extends RESTAssuredBase{
 				
 			}
 		
-		
 	}
-
 
 }

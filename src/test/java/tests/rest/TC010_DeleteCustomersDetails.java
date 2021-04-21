@@ -8,12 +8,10 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import lib.rest.RESTAssuredBase;
+import lib.rest.GenericFunctions;
 
-public class TC010_DeleteCustomersDetails extends RESTAssuredBase{
-	
-	
-	
+public class TC010_DeleteCustomersDetails extends GenericFunctions{
+		
 	@BeforeTest
 	public void setValues() {
 
@@ -25,20 +23,25 @@ public class TC010_DeleteCustomersDetails extends RESTAssuredBase{
 		dataFileName = "TC010_DeleteCustomersDetails";
 		dataFileType = "Excel";
 	}
-	
-	
-	
+		
 	@Test(dataProvider = "fetchData")
 	public void insertCustomersDetails(String deleteJsonData , String insertJsonData) throws ClassNotFoundException, SQLException, JSONException {		
 		String endPoint = "customers";
-			
+		
+		//Inserting the record if the expected record not found in DB to delete.
+		String customer = getDataFromDB("SelectDeletedFirstName");
+		if (customer==null) 
+		{
+			postWithJsonAsBody(insertJsonData, RestAssured.baseURI+endPoint);
+		}
+		
 		Response response = DeleteWithJsonAsBody(deleteJsonData, RestAssured.baseURI+endPoint);
 		verifyResponseCode(response, 200);
 		verifyContentWithKey(response, "message", "SUCCESS");
 		//	verifyResponseTime(response, 5000);
 		
-		//validating the whether the record deleted in DB
-		String customer = getDataFromDB("SelectDeletedFirstName");
+		//validating whether the record deleted in DB or not
+		customer = getDataFromDB("SelectDeletedFirstName");
 		if (customer==null) 
 		{
 			postWithJsonAsBody(insertJsonData, RestAssured.baseURI+endPoint);

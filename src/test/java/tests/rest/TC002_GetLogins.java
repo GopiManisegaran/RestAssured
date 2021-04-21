@@ -9,9 +9,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
-import lib.rest.RESTAssuredBase;
+import lib.rest.GenericFunctions;
 
-public class TC002_GetLogins extends RESTAssuredBase{
+public class TC002_GetLogins extends GenericFunctions{
 	
 	
 	

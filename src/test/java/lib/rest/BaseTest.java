@@ -23,7 +23,7 @@ import lib.utils.DataInputProvider;
 import lib.utils.HTMLReporter;
 import restAssured.restAssured;
 
-public class PreAndTest extends HTMLReporter{
+public class BaseTest extends HTMLReporter{
 	
 	public String dataFileName, dataFileType,url ;	
 	public static String keyCloakToken;

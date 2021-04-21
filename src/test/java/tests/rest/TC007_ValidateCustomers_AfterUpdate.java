@@ -10,9 +10,9 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import lib.rest.RESTAssuredBase;
+import lib.rest.GenericFunctions;
 
-public class TC007_ValidateCustomers_AfterUpdate extends RESTAssuredBase{
+public class TC007_ValidateCustomers_AfterUpdate extends GenericFunctions{
 	
 	
 	
@@ -33,6 +33,8 @@ public class TC007_ValidateCustomers_AfterUpdate extends RESTAssuredBase{
 	@Test//(dataProvider = "fetchData")
 	public void getCustomers() throws ClassNotFoundException, SQLException, JSONException, ArithmeticException, InvocationTargetException {		
 		String endPoint = "customers";
+		
+		// For the integrity of the testcase deleting,inserting,updating the record for the fresh execution
 		deleteDataFromDB("DeleteCustomerData");
 		insertDataInDB("InsertCustomerData");
 		updateDataInDB("UpdateCustomerData");

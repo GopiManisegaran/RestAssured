@@ -28,21 +28,21 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.google.gson.JsonArray;
 
-import lib.rest.PreAndTest;
-import lib.rest.RESTAssuredBase;
+import lib.rest.BaseTest;
+import lib.rest.GenericFunctions;
 import net.javacrumbs.jsonunit.JsonAssert;
 import restAssured.restAssured;
 
 @SuppressWarnings("unchecked")
 @Service
-public class DBConnection extends RESTAssuredBase{
+public class DBConnection extends GenericFunctions{
 	
 	
 	
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 	public  String dbUrl = "jdbc:sqlserver://localhost:1433;databaseName=TestDB;integratedSecurity=true";				
-	public String username = "DIR\\kumar.vp";	
+	public String username = "DIR\\xxxx";	
 	
 	public String password = "none";	
 	
